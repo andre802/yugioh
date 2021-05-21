@@ -1,4 +1,6 @@
 TODO
-Click image to view sets it belongs to, price, alternate art
+Click set to see cards in set
 
 DONE
+Click image to view sets it belongs to, price, alternate art (alternate art
+only shows if resource is pulled using name)
