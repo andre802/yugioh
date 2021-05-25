@@ -39,6 +39,11 @@ button {
     justify-content: center;
     width: 100vw;
 }
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 #details {
     background-color: black;
     color: white;
@@ -57,4 +62,7 @@ button {
     text-align: center;
     border-radius: 4px;
     box-shadow: 3px 3px 4px red;
+}
+a {
+    color: inherit;
 }

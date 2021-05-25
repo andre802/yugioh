@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Card = (props) => {
     return (
         <div className="card">
-            <Link to={`/details/${props.id}`}><img src={props.image}/></Link>
+            <Link to={`/details/${props.name}`}><img src={props.image}/></Link>
         </div>
     )
 

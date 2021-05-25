@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Card from './Card';
 import CardDetails from './CardDetails';
+import SetDetails from './SetDetails';
 const App = () => {
     const [cards, setCards] = useState([]);
     const [text, setText] = useState("");
@@ -19,10 +20,15 @@ const App = () => {
     }
     return (
         <div>
-
             <Router>
+                <header>
+                    <Link to="/">
+                        Home
+                    </Link>
+                </header>
                 <Switch>
                     <Route exact path="/">
+                        
                         <header>
                             <form
                                 onSubmit={e => {
@@ -41,12 +47,15 @@ const App = () => {
                         </header>
                         <div id="cards">
                             {cards.map(c => (
-                                <Card ley={c["id"]} id={c["id"]} image={c["card_images"][0]["image_url"]} />
+                                <Card name={c["name"]} key={c["id"]} id={c["id"]} image={c["card_images"][0]["image_url"]} />
                             ))}
                         </div>
                     </Route>
-                    <Route path="/details/:id">
+                    <Route exact path="/details/:name">
                         <CardDetails />
+                    </Route>
+                    <Route exact path="/setDetails/:name">
+                        <SetDetails />
                     </Route>
                 </Switch>
             </Router>
