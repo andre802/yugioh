@@ -15,6 +15,7 @@ const SetDetails = () => {
     return (
         <div id="details">
             <h1>{name}</h1>
+            <h2>{`${cards.length} Cards`}</h2>
             <div id="cards">
                 {cards ? cards.map(card => (
                     <Card key={card.id} name={card.name} image={card["card_images"][0]["image_url"]} id={card.id}/>

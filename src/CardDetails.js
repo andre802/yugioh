@@ -7,6 +7,7 @@ const CardDetails = () => {
         fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${name}`)
             .then(data => data.json())
             .then(json => {
+                console.log(json);
                 setCardInfo(json["data"][0]);
             })
     }, []);
@@ -26,7 +27,7 @@ const CardDetails = () => {
             </div>
             <div id="sets">
 
-                {Object.keys(cardInfo).length != 0 ? cardInfo["card_sets"].map(({ set_name, set_code, set_rarity, set_price }) => (
+                {cardInfo["card_sets"] ? cardInfo["card_sets"].map(({ set_name, set_code, set_rarity, set_price }) => (
                     <Link to={`../setDetails/${set_name}`}>
                     <div className="set">
                         <h1>{set_name}</h1>
@@ -35,7 +36,7 @@ const CardDetails = () => {
                         <h4>{`$${set_price}`}</h4>
                     </div>
                     </Link>
-                )) : <h1>Loading...</h1>}
+                )) : null }
             </div>
 
 
