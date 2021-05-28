@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Card from './Card';
 import CardDetails from './CardDetails';
 import SetDetails from './SetDetails';
+import Sets from './Sets';
 const App = () => {
     const [cards, setCards] = useState([]);
     const [text, setText] = useState("");
@@ -25,10 +26,12 @@ const App = () => {
                     <Link to="/">
                         Home
                     </Link>
+                    <Link to="/cardSets">
+                        Sets
+                    </Link>
                 </header>
                 <Switch>
                     <Route exact path="/">
-                        
                         <header>
                             <form
                                 onSubmit={e => {
@@ -46,6 +49,7 @@ const App = () => {
                             </form>
                         </header>
                         <div id="cards">
+
                             {cards.map(c => (
                                 <Card name={c["name"]} key={c["id"]} id={c["id"]} image={c["card_images"][0]["image_url"]} />
                             ))}
@@ -57,6 +61,10 @@ const App = () => {
                     <Route exact path="/setDetails/:name">
                         <SetDetails />
                     </Route>
+                    <Route exact path = '/cardSets'>
+                        <Sets />
+                    </Route>
+                    
                 </Switch>
             </Router>
         </div>

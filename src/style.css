@@ -5,7 +5,6 @@
 }
 body {
     background: black;
-    width: 100vw;
 }
 header {
     background: white;
@@ -14,19 +13,27 @@ header {
     justify-content: center;
     text-align: center;
 }
+header * {
+    margin: 0 1em;
+}
 form {
     padding: 1em;
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 3px 3px 4px black;
 }
-label, button {
+#setFilters {
+    display: flex;
+    justify-content: center;
+}
+label, button, select {
     margin: 0 .5em;
 }
 button {
     padding: 5px;
 }
 .card {
+    width: 25em;
     margin: 1em;
     transition: .25s all linear;
 }
@@ -37,7 +44,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100vw;
 }
 .images {
     display: flex;
@@ -48,6 +54,7 @@ button {
     background-color: black;
     color: white;
     text-align: center;
+    padding-top: 1em;
 }
 #sets {
     padding: 1em;
@@ -55,7 +62,12 @@ button {
     justify-content: center;
     flex-wrap: wrap;
 }
+.description {
+    color: white;
+    text-align: center;
+}
 .set {
+    color: white;
     border: 1px solid black;
     margin: 1em;
     padding: 1em;
