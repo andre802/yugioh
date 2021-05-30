@@ -7,6 +7,7 @@ import CardDetails from './CardDetails';
 import SetDetails from './SetDetails';
 import Sets from './Sets';
 import Attributes from './Attributes';
+import Archetypes from './Archetypes';
 const App = () => {
     const [cards, setCards] = useState([]);
     const [text, setText] = useState("");
@@ -34,6 +35,9 @@ const App = () => {
                     </Link>
                     <Link to="/attributes">
                         <h1>Attributes</h1>
+                    </Link>
+                    <Link to="/archetypes">
+                        <h1>Archetypes</h1>
                     </Link>
                 </header>
                 <Switch>
@@ -72,6 +76,9 @@ const App = () => {
                     </Route>
                     <Route exact path="/attributes">
                         <Attributes />
+                    </Route>
+                    <Route exact path = "/archetypes">
+                        <Archetypes />
                     </Route>
                 </Switch>
             </Router>

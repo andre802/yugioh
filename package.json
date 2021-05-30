@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
+    "node-fetch": "^2.6.1",
     "parcel": "^1.12.3"
   },
   "dependencies": {

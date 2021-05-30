@@ -10,8 +10,7 @@ const Attributes = () => {
         } else {
             fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?attribute=${attribute}`)
             .then(data => data.json())
-            .then(json => setCards(json["data"]))
-        }
+            .then(json => setCards(json["data"]))        }
     }, [attribute])
 
     return (
