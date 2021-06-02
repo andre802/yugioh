@@ -2,10 +2,11 @@ TODO
 Styling
 Show all monster, spell, trap cards and filters
 Add error boundaries
-Show archetypes
 
 DONE
 Click image to view sets it belongs to, price, alternate art 
 Click set to see cards in set
 Show all card sets
+Show archetypes
+
 
